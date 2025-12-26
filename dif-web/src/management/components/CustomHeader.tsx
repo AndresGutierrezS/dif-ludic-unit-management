@@ -1,7 +1,7 @@
 
 export const CustomHeader = () => {
     return (
-      <div className="bg-(--color-principal) w-full h-20 px-7 text-white flex items-center justify-between">
+      <header className="bg-(--color-principal) w-full h-20 px-7 text-white flex items-center justify-between">
         
         {/* left */}
         <div className="flex items-center gap-3">
@@ -32,6 +32,6 @@ export const CustomHeader = () => {
           </button>
         </div>
             
-      </div>
+      </header>
     );
 }
