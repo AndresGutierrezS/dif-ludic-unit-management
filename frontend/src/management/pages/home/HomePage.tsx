@@ -1,3 +1,4 @@
+import { CustomPagination } from "../../../components/custom/CustomPagination"
 import { CustomRecordsTable } from "../../components/CustomRecordsTable"
 import { CustomSearch } from "../../components/CustomSearch"
 
@@ -6,6 +7,7 @@ export const HomePage = () => {
     <>
       <CustomSearch />
       <CustomRecordsTable />
+      <CustomPagination />
     </>
   )
 }

@@ -17,16 +17,16 @@ export const CustomRecordsTable = () => {
         <table className="w-full border-collapse text-sm">
           
           {/* Table head */}
-          <thead className="bg-blue-100 text-(--color-pricipal) text-left">
+          <thead className="bg-(--color-secondary) text-(--color-principal) text-left border-b">
             <tr>
-              <th className="px-3 py-2">Persona menor</th>
-              <th className="px-3 py-2 hidden md:table-cell">CURP</th>
-              <th className="px-3 py-2 hidden lg:table-cell">Fecha nac.</th>
-              <th className="px-3 py-2 hidden lg:table-cell">Fecha ingreso</th>
-              <th className="px-3 py-2 hidden md:table-cell">Albergue</th>
-              <th className="px-3 py-2 hidden lg:table-cell">Autoridad</th>
-              <th className="px-3 py-2">Estado</th>
-              <th className="px-3 py-2 text-center">Acciones</th>
+              <th className="px-3 py-3">Persona menor</th>
+              <th className="px-3 py-3 hidden md:table-cell">CURP</th>
+              <th className="px-3 py-3 hidden lg:table-cell">Fecha nac.</th>
+              <th className="px-3 py-3 hidden lg:table-cell">Fecha ingreso</th>
+              <th className="px-3 py-3 hidden md:table-cell">Albergue</th>
+              <th className="px-3 py-3 hidden lg:table-cell">Autoridad</th>
+              <th className="px-3 py-3">Estado</th>
+              <th className="px-3 py-3 text-center">Acciones</th>
             </tr>
           </thead>
 
