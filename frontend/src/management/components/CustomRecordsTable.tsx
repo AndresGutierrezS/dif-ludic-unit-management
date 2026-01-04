@@ -1,4 +1,6 @@
 import { Eye, FileText, Pencil } from "lucide-react"
+import { minorsMock } from "../../mocks/minor.model.mock";
+import { calculateAge } from "../../utils/calculateAge";
 
 export const CustomRecordsTable = () => {
   return (
@@ -32,46 +34,50 @@ export const CustomRecordsTable = () => {
 
           {/* Table body */}
           <tbody>
-            <tr className="border-b last:border-b-0">
-              <td className="px-3 py-3">
-                <p className="font-semibold">María Fernanda López</p>
-                <p className="text-xs text-gray-500">Femenino · 8 años</p>
-              </td>
+            
+            { minorsMock.map(minor => (
+              <tr className="border-b last:border-b-0">
+                <td className="px-3 py-3">
+                  <p className="font-semibold">{minor.fullName}</p>
+                  <p className="text-xs text-gray-500">{minor.gender} · {calculateAge(minor.birthday)} años</p>
+                </td>
 
-              <td className="px-3 py-3 hidden md:table-cell">
-                LOGF020101HDFRRA8
-              </td>
+                <td className="px-3 py-3 hidden md:table-cell">
+                  LOGF020101HDFRRA8
+                </td>
 
-              <td className="px-3 py-3 hidden lg:table-cell">
-                01/01/2015
-              </td>
+                <td className="px-3 py-3 hidden lg:table-cell">
+                  01/01/2015
+                </td>
 
-              <td className="px-3 py-3 hidden lg:table-cell">
-                15/03/2023
-              </td>
+                <td className="px-3 py-3 hidden lg:table-cell">
+                  15/03/2023
+                </td>
 
-              <td className="px-3 py-3 hidden md:table-cell">
-                Casa Hogar Esperanza
-              </td>
+                <td className="px-3 py-3 hidden md:table-cell">
+                  Casa Hogar Esperanza
+                </td>
 
-              <td className="px-3 py-3 hidden lg:table-cell">
-                DIF Municipal
-              </td>
+                <td className="px-3 py-3 hidden lg:table-cell">
+                  DIF Municipal
+                </td>
 
-              <td className="px-3 py-3">
-                <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-green-100 text-green-700">
-                  ACTIVO
-                </span>
-              </td>
+                <td className="px-3 py-3">
+                  <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-green-100 text-green-700">
+                    ACTIVO
+                  </span>
+                </td>
 
-              <td className="px-3 py-3">
-                <div className="flex justify-center gap-3">
-                  <Pencil className="w-4 h-4 cursor-pointer hover:text-blue-600" />
-                  <Eye className="w-4 h-4 cursor-pointer hover:text-gray-700" />
-                  <FileText className="w-4 h-4 cursor-pointer hover:text-green-600" />
-                </div>
-              </td>
-            </tr>
+                <td className="px-3 py-3">
+                  <div className="flex justify-center gap-3">
+                    <Pencil className="w-4 h-4 cursor-pointer hover:text-blue-600" />
+                    <Eye className="w-4 h-4 cursor-pointer hover:text-gray-700" />
+                    <FileText className="w-4 h-4 cursor-pointer hover:text-green-600" />
+                  </div>
+                </td>
+              </tr>
+            ))}
+            
           </tbody>
 
         </table>

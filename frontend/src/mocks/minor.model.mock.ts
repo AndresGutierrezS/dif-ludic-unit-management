@@ -7,6 +7,8 @@ export interface Shelter {
 
 export type MinorStatus = 'ACTIVE' | 'INACTIVE' | 'RELEASED';
 
+export type Gender = 'Man' | 'Woman'
+
 export interface Minor {
     id: string;
     fullName: string;
@@ -15,6 +17,7 @@ export interface Minor {
     placementDate: string;
     shelter: Shelter;
     status: MinorStatus;
+    gender: Gender;
 } 
 
 
@@ -30,7 +33,8 @@ export const minorsMock: Minor[] = [
       id: "S1",
       name: "Albergue Esperanza"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: "Man"
   },
   {
     id: "2",
@@ -42,7 +46,8 @@ export const minorsMock: Minor[] = [
       id: "S2",
       name: "Casa Hogar Amanecer"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: 'Woman'
   },
   {
     id: "3",
@@ -54,7 +59,8 @@ export const minorsMock: Minor[] = [
       id: "S1",
       name: "Albergue Esperanza"
     },
-    status: "RELEASED"
+    status: "RELEASED",
+    gender: "Man"
   },
   {
     id: "4",
@@ -66,7 +72,8 @@ export const minorsMock: Minor[] = [
       id: "S3",
       name: "Refugio Nuevo Camino"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: "Woman"
   },
   {
     id: "5",
@@ -78,7 +85,8 @@ export const minorsMock: Minor[] = [
       id: "S2",
       name: "Casa Hogar Amanecer"
     },
-    status: "INACTIVE"
+    status: "INACTIVE",
+    gender: "Woman"
   },
   {
     id: "6",
@@ -90,7 +98,8 @@ export const minorsMock: Minor[] = [
       id: "S4",
       name: "Hogar San José"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: "Woman"
   },
   {
     id: "7",
@@ -102,7 +111,8 @@ export const minorsMock: Minor[] = [
       id: "S1",
       name: "Albergue Esperanza"
     },
-    status: "RELEASED"
+    status: "RELEASED",
+    gender: "Man"
   },
   {
     id: "8",
@@ -114,7 +124,8 @@ export const minorsMock: Minor[] = [
       id: "S3",
       name: "Refugio Nuevo Camino"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: "Woman"
   },
   {
     id: "9",
@@ -126,7 +137,8 @@ export const minorsMock: Minor[] = [
       id: "S4",
       name: "Hogar San José"
     },
-    status: "INACTIVE"
+    status: "INACTIVE",
+    gender: "Man"
   },
   {
     id: "10",
@@ -138,6 +150,7 @@ export const minorsMock: Minor[] = [
       id: "S2",
       name: "Casa Hogar Amanecer"
     },
-    status: "ACTIVE"
+    status: "ACTIVE",
+    gender: "Woman"
   }
 ]
