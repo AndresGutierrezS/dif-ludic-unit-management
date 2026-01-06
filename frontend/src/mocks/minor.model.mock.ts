@@ -18,6 +18,7 @@ export interface Minor {
     shelter: Shelter;
     status: MinorStatus;
     gender: Gender;
+    autority: string;
 } 
 
 
@@ -34,7 +35,8 @@ export const minorsMock: Minor[] = [
       name: "Albergue Esperanza"
     },
     status: "ACTIVE",
-    gender: "Man"
+    gender: "Man",
+    autority: "DIF Municipal"
   },
   {
     id: "2",
@@ -47,7 +49,8 @@ export const minorsMock: Minor[] = [
       name: "Casa Hogar Amanecer"
     },
     status: "ACTIVE",
-    gender: 'Woman'
+    gender: 'Woman',
+    autority: "DIF Municipal"
   },
   {
     id: "3",
@@ -60,7 +63,8 @@ export const minorsMock: Minor[] = [
       name: "Albergue Esperanza"
     },
     status: "RELEASED",
-    gender: "Man"
+    gender: "Man",
+    autority: "DIF Municipal"
   },
   {
     id: "4",
@@ -73,7 +77,8 @@ export const minorsMock: Minor[] = [
       name: "Refugio Nuevo Camino"
     },
     status: "ACTIVE",
-    gender: "Woman"
+    gender: "Woman",
+    autority: "DIF Municipal"
   },
   {
     id: "5",
@@ -86,7 +91,8 @@ export const minorsMock: Minor[] = [
       name: "Casa Hogar Amanecer"
     },
     status: "INACTIVE",
-    gender: "Woman"
+    gender: "Woman",
+    autority: "DIF Municipal"
   },
   {
     id: "6",
@@ -99,7 +105,8 @@ export const minorsMock: Minor[] = [
       name: "Hogar San José"
     },
     status: "ACTIVE",
-    gender: "Woman"
+    gender: "Woman",
+    autority: "DIF Municipal"
   },
   {
     id: "7",
@@ -112,7 +119,8 @@ export const minorsMock: Minor[] = [
       name: "Albergue Esperanza"
     },
     status: "RELEASED",
-    gender: "Man"
+    gender: "Man",
+    autority: "DIF Municipal"
   },
   {
     id: "8",
@@ -125,7 +133,8 @@ export const minorsMock: Minor[] = [
       name: "Refugio Nuevo Camino"
     },
     status: "ACTIVE",
-    gender: "Woman"
+    gender: "Woman",
+    autority: "DIF Municipal"
   },
   {
     id: "9",
@@ -138,7 +147,8 @@ export const minorsMock: Minor[] = [
       name: "Hogar San José"
     },
     status: "INACTIVE",
-    gender: "Man"
+    gender: "Man",
+    autority: "DIF Municipal"
   },
   {
     id: "10",
@@ -151,6 +161,7 @@ export const minorsMock: Minor[] = [
       name: "Casa Hogar Amanecer"
     },
     status: "ACTIVE",
-    gender: "Woman"
+    gender: "Woman",
+    autority: "DIF Municipal"
   }
 ]

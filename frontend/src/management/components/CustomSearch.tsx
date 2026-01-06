@@ -10,7 +10,7 @@ export const CustomSearch = () => {
   const query = searchParams.get('query') || '';
 
   const handleSearch = () => {
-    const query = inputRef.current?.value.trim() ?? '';
+    const query = inputRef.current?.value.toLocaleLowerCase().trim() ?? '';
     const newParams = new URLSearchParams(searchParams);
 
     if(!query) {
@@ -22,7 +22,7 @@ export const CustomSearch = () => {
     setSearchParams(newParams);
   }
 
-  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if(event.key === 'Enter') {
       handleSearch();
     }
@@ -43,7 +43,7 @@ export const CustomSearch = () => {
               ref={inputRef}
               className="w-full px-2 py-2 text-sm outline-none" 
               placeholder={'Buscar por nombre, CURP o albergue...'}
-              onKeyDown={handleOnKeyDown}
+              onKeyDown={handleKeyDown}
               defaultValue={query}
             />
           </div>

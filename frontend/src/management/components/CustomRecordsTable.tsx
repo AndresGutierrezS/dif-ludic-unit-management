@@ -1,21 +1,33 @@
 import { Eye, FileText, Pencil } from "lucide-react"
 import { minorsMock } from "../../mocks/minor.model.mock";
 import { calculateAge } from "../../utils/calculateAge";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export const CustomRecordsTable = () => {
+  
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const query = searchParams.get('query') || undefined; 
+
+  const filteredMinors = !query ?
+    minorsMock :
+    minorsMock.filter(minor => 
+      minor.fullName.toLowerCase().includes(query) ||
+      minor.curp.toLowerCase().includes(query) ||
+      minor.shelter.name.toLowerCase().includes(query)
+    );
+  
   return (
     <section className="bg-white rounded-md shadow-sm overflow-hidden">
       
       {/* Table header */}
       <div className="bg-(--color-principal) text-white px-4 py-3 flex justify-between items-center">
         <h2 className="text-lg font-semibold">Registros de menores</h2>
-        <button className="bg-white text-(--color-principal) text-sm font-semibold px-4 py-2 rounded-md">
+        <Link to={'/minor/new'} className="bg-white text-(--color-principal) text-sm font-semibold px-4 py-2 rounded-md">
           Nuevo registro
-        </button>
+        </Link>
       </div>
 
-      {/* Responsive wrapper */}
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           
@@ -36,7 +48,7 @@ export const CustomRecordsTable = () => {
           {/* Table body */}
           <tbody>
             
-            { minorsMock.map(minor => (
+            { filteredMinors.map(minor => (
               <tr className="border-b last:border-b-0">
                 <td className="px-3 py-3">
                   <p className="font-semibold">{minor.fullName}</p>
@@ -60,7 +72,7 @@ export const CustomRecordsTable = () => {
                 </td>
 
                 <td className="px-3 py-3 hidden lg:table-cell">
-                  DIF Municipal
+                  {minor.autority}
                 </td>
 
                 <td className="px-3 py-3">
