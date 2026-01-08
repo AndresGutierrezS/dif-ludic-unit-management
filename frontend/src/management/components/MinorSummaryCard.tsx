@@ -20,7 +20,7 @@ export const MinorSummaryCard = () => {
             Curp: Curp34242343 · Edad: 15 anios · Sexo: Masculino
           </p>
 
-          <p className="bg-green-100 text-green-700 p-1 rounded-2xl text-xs w-fit mx-auto sm:mx-0">
+          <p className="bg-green-100 text-green-700 px-3 py-1 rounded-2xl text-xs w-fit mx-auto sm:mx-0">
             Activo
           </p>
 
