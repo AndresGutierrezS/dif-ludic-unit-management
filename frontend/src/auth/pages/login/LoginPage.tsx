@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export const LoginPage = () => {
   return (
     <>
-      <p className='text-center mb-6 text-lg text-gray-700'>
+      <p className='text-center mb-6 text-lg text-gray-700 font-semibold'>
         Inserte sus credenciales para ingresar
       </p>
 
