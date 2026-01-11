@@ -1,37 +1,64 @@
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"
 
 export const RegisterPage = () => {
+  
+  const navigate = useNavigate();
+  const [isPosting, setIsPosting] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    setIsPosting(true);
+
+    const formData = new FormData(event.target as HTMLFormElement);
+    const name = formData.get('name') as string;
+    const password = formData.get('password') as string;
+    const password_confirmation = formData.get('password_confirmation') as string;
+
+    //todo: isValid
+
+    navigate('/auth');
+    return;
+    
+    setIsPosting(false);
+  }  
+  
   return (
     <>
       <p className="text-center mb-6 text-lg text-gray-700 font-semibold">
         Registrar nuevo usuario
       </p>
 
-      <div className="flex flex-col gap-4">
+      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <input
           type="text"
+          name="name"
           placeholder="Nombre de usuario"
           className="w-full p-2.5 shadow-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-principal)"
         />
 
         <input
           type="password"
+          name="password"
           placeholder="Contraseña"
           className="w-full p-2.5 shadow-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-principal)"
         />
 
         <input
           type="password"
+          name="password_confirmation"
           placeholder="Confirmar contraseña"
           className="w-full p-2.5 shadow-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-principal)"
         />
 
         <button
           className="text-white bg-(--color-principal) rounded-md font-semibold p-2.5 hover:opacity-90 transition cursor-pointer"
+          type="submit"
+          disabled={isPosting}
         >
           Registrarse
         </button>
-      </div>
+      </form>
 
       <p className="text-sm text-center text-gray-600 mt-5">
         ¿Ya tienes una cuenta?{" "}
