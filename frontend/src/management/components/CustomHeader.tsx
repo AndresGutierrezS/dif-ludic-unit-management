@@ -27,9 +27,11 @@ export const CustomHeader = () => {
               <p className="text-sm font-semibold">Administrador</p>
               <p className="text-xs">Último acceso: 17/07/2025 21:32</p>
             </div>
-            <button className="rounded-md border text-sm px-3 py-1.5 cursor-pointer">
-              Cerrar sesión
-            </button>
+            <Link to={'/auth'}>
+              <button className="rounded-md border text-sm px-3 py-1.5 cursor-pointer">
+                Cerrar sesión
+              </button>
+            </Link>
           </div>
 
         </div>

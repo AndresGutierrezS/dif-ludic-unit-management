@@ -32,7 +32,7 @@ export const CustomRecordsTable = () => {
       {/* Table header */}
       <div className="bg-(--color-principal) text-white px-4 py-3 flex justify-between items-center">
         <h2 className="text-lg font-semibold">Registros de menores</h2>
-        <Link to={'/minor/new'} className="bg-white text-(--color-principal) text-sm font-bold px-4 py-2 rounded-md">
+        <Link to={'/minors/edit/new'} className="bg-white text-(--color-principal) text-sm font-bold px-4 py-2 rounded-md">
           Nuevo registro
         </Link>
       </div>
@@ -94,7 +94,7 @@ export const CustomRecordsTable = () => {
 
                 <td className="px-3 py-3">
                   <div className="flex justify-center gap-3">
-                    <Link to={`/minors/${minor.curp}`} >
+                    <Link to={`/minors/edit/${minor.curp}`} >
                       <Pencil className="w-4 h-4 cursor-pointer hover:text-blue-600" />
                     </Link>
                     <Link to={`/minors/${minor.curp}`} >

@@ -8,6 +8,7 @@ import { DashboardPage } from "../management/pages/dashboard/DashboardPage";
 import { AdminLayout } from "../admin/layouts/AdminLayout";
 import AdminDashboard from "../admin/pages/AdminDashboard";
 import { MinorDetailPage } from "../management/pages/Minors/MinorDetailPage";
+import { MinorEditPage } from "../management/pages/Minors/MinorEditPage";
 
 
 export const appRouter = createBrowserRouter([
@@ -26,6 +27,10 @@ export const appRouter = createBrowserRouter([
             {
                 path: 'minors/:curp',
                 element: <MinorDetailPage />
+            },
+            {
+                path: 'minors/edit/:curp',
+                element: <MinorEditPage />
             }
         ]
     },
